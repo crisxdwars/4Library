@@ -1,0 +1,104 @@
+:root {
+    --border: 1px solid rgba(1,1,1,0.3);
+}
+
+* {
+    font-family: Noto Sans;
+}
+
+.home {
+    width: 100%; height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "userinfo b"
+    "userinfo c";
+    gap: 10px;
+}
+
+.userinfo {
+    grid-area: userinfo;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.box2 {
+    grid-area: b;
+    border-top-right-radius: 8px;
+}
+
+.box3 {
+    grid-area: c;
+    border-bottom-right-radius: 8px;
+}
+
+.userinfo, .box2, .box3 {
+    border: var(--border);
+}
+
+.userinfo-grid {
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 10fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas:
+    "user blank"
+    "info tools"
+    "info tools";
+}
+
+.userinfo-user {
+    box-sizing: border-box;
+    padding: 0px 20px;
+    display: grid;
+    grid-area: user;
+    overflow: hidden;
+    border: var(--border);
+    border-radius: 5px;
+    grid-template-columns: 20fr 1fr;
+    grid-template-areas: "username button";
+}
+
+.userinfo-greet {
+    grid-area: username;
+}
+
+.userinfo-greet span {
+    font-weight: 300;
+}
+
+.userinfo-greet :nth-of-type(2) {
+    font-size: 20px;
+}
+
+.edit-button {
+    display: grid;
+    place-items: center;
+    grid-area: button;
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+
+}
+
+.edit-button:hover {
+    color: rgb(73, 141, 59);
+}
+
+.userinfo-blank {
+    display: grid;
+    padding: 20px;
+    grid-area: blank;
+}
+
+.userinfo-info {
+    grid-area: info;
+    overflow: hidden;
+}
+
+.userinfo-buttons {
+    grid-area: tools;
+}
