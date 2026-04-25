@@ -1,0 +1,12 @@
+@import url('sharedvar.css');
+
+* {
+    font-family: var(--font-family);
+}
+
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow-x: hidden;
+    touch-action: pan-y;
+}

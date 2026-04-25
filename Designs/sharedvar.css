@@ -1,0 +1,12 @@
+/* "Noto Sans" Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary: rgba(255,255,255,1);
+    --hover-bg: rgba(200,200,200,0.4);
+    --border: rgba(1,1,1,0.2) 1px solid;
+    --border-search: rgba(1,1,1,0.8) 1px solid;
+    --font-family: Noto sans;
+    --text-primary: rgb(32,32,32);
+}
