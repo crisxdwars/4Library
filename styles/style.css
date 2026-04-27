@@ -9,16 +9,27 @@
 }
 
 body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
     background: var(--primary);
+    overflow: hidden;
 }
 
 .root {
+
+    box-sizing: border-box;
+    height: 100vh; width: 100vw;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-content: space-evenly;
     gap: 10px;
 
     .header {
+        user-select: none;
+        flex: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -28,6 +39,7 @@ body {
         border-radius: 10px;
         border: var(--border);
         color: white;
+        gap: 20px;
 
         .brand {
             margin-left: 10px;
@@ -62,10 +74,11 @@ body {
     }
 
     .center {
+        flex: 100;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        gap: 5px;
+        gap: 10px;
         
        /* More */
 
@@ -84,7 +97,7 @@ body {
        }
 
        .right {
-        flex: 3;
+        flex: 8;
         display: flex;
         flex-direction: column;
         background: var(--secondary);
@@ -92,6 +105,8 @@ body {
     }
 
     .footer {
+        user-select: none;
+        flex: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
